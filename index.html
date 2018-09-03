@@ -10,10 +10,8 @@
 
     <title>i am mayorbyrne.</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="./styles/bootstrap-4.1.3/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
+    <link href="./styles/animate.css" rel="stylesheet">
     <link href="./styles/cover.css" rel="stylesheet">
   </head>
 
@@ -52,9 +50,7 @@
       </main>
 
       <footer class="mastfoot mt-auto">
-        <div class="inner">
-<!--          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
-        </div>
+        <div class="inner"></div>
       </footer>
     </div>
 
@@ -62,39 +58,69 @@
     <script>
       document.querySelector("#homeLink").onclick = function(event)
       {
+        resetLinks(["#websitesLink", "#contactLink"]);
         event.target.className = "nav-link active";
-        document.querySelector("#websitesLink").className = "nav-link";
-        document.querySelector("#contactLink").className = "nav-link";
-        
         event.preventDefault();
-        document.querySelector("#aboutme").style.display = "block";
-        document.querySelector("#sites").style.display = "none";
-        document.querySelector("#contact").style.display = "none";
+        show(["#aboutme"]);
+        hide(["#sites", "#contact"]);
+        animate("main", "slideInRight");
       }
       
       document.querySelector("#websitesLink").onclick = function(event)
       {
-        document.querySelector("#homeLink").className = "nav-link";
+        resetLinks(["#homeLink", "#contactLink"]);
         event.target.className = "nav-link active";
-        document.querySelector("#contactLink").className = "nav-link";
-        
         event.preventDefault();
-        document.querySelector("#aboutme").style.display = "none";
-        document.querySelector("#sites").style.display = "block";
-        document.querySelector("#contact").style.display = "none";
+        show(["#sites"]);
+        hide(["#aboutme", "#contact"]);
+        animate("main", "slideInRight");
       }
       
       document.querySelector("#contactLink").onclick = function(event)
       {
-        document.querySelector("#homeLink").className = "nav-link";
-        document.querySelector("#websitesLink").className = "nav-link";
+        resetLinks(["#homeLink", "#websitesLink"]);
         event.target.className = "nav-link active";
-        
         event.preventDefault();
-        document.querySelector("#aboutme").style.display = "none";
-        document.querySelector("#sites").style.display = "none";
-        document.querySelector("#contact").style.display = "block";
-      }      
+        show(["#contact"]);
+        hide(["#aboutme", "#sites"]);
+        animate("main", "slideInRight");
+      }
+      
+      function resetLinks(querySelects)
+      {
+        querySelects.forEach((querySelect) =>
+        {
+          document.querySelector(querySelect).className = "nav-link";
+        });        
+      }
+      
+      function show(querySelects)
+      {
+        querySelects.forEach((querySelect) =>
+        {
+          document.querySelector(querySelect).style.display = "block";
+        });
+      }
+      
+      function hide(querySelects)
+      {
+        querySelects.forEach((querySelect) =>
+        {
+          document.querySelector(querySelect).style.display = "none";
+        })
+      }
+      
+      function animate(querySelect, animationType)
+      {
+        var target = document.querySelector(querySelect);
+        
+        target.addEventListener('animationend', function()
+        {
+          target.classList.remove('animated', animationType);
+        });
+        
+        target.classList.add('animated', animationType);        
+      }
     </script>
   </body>
 </html>

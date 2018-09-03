@@ -19,6 +19,14 @@ content="text/html; charset=iso-8859-1">
 
 <p align="left"><a href="unknown.html"><strong>Adam</strong></a></p>
 
-<p align="left"><a href="frames.html">Back to main Page</a></p>
+<p><a id="back" href="">Back to Main Page</a></p>
+  
+<script>
+  document.querySelector("#back").onclick = function(event)
+  {
+    event.preventDefault();
+    window.parent.dispatchEvent(new Event("back"));
+  }
+</script>
 </body>
 </html>

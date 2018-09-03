@@ -112,6 +112,14 @@ scrollamount="10">The Rides at Six Flags Great America</marquee></h2>
         ride Raging Bull.</li>
 </ul>
 
-<p><a href="frames.html">Back to Main Page</a></p>
+<p><a id="back" href="">Back to Main Page</a></p>
+  
+<script>
+  document.querySelector("#back").onclick = function(event)
+  {
+    event.preventDefault();
+    window.parent.dispatchEvent(new Event("back"));
+  }
+</script>
 </body>
 </html>

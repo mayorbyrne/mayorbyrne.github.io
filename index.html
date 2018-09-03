@@ -1,96 +1,100 @@
-<html>
+
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Six Flags Great America Unofficial Homepage</title>
-    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>i am mayorbyrne.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./styles/bootstrap-4.1.3/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./styles/cover.css" rel="stylesheet">
   </head>
 
-  <body>
-    <div id="toolbar">
-      <h1 align="center"><font color="#FF0000">SIX FLAGS </font></h1>
-      <h2 align="center"><font color="#FF0000">Great America</font></h2>
+  <body class="text-center">
 
-      <hr>
-      
-      <p>Pictures (Coming Soon)</p>
-      
-      <hr>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">..::mayor byrne::..</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a id="homeLink" class="nav-link active" href="#">Home</a>
+            <a id="websitesLink" class="nav-link" href="#">Vintage Dev</a>
+            <a id="contactLink" class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
 
-      <p><a href="map.html">Image Map</a></p>
+      <main role="main" class="inner cover">
+        <div id="aboutme" style="min-width: 640px;">
+          <h1 class="cover-heading">..::About me::..</h1>
+          <p class="lead">Hi, I'm Kevin Moritz. I live in Middle Tennessee, play music, and develop software. I enjoy watching hockey, riding rollercoasters, and playing with cute furry animals. I have a wonderful fiancee and fantastic family and friends.</p>
+        </div>
+        
+        <div id="sites">
+          <h1 class="cover-heading">..::Vintage Websites::..</h1>
+          <p class="lead">
+            <a href="./sfgam/index.html" class="btn btn-lg btn-dark btn-shadow">Six Flags Great America Unofficial Website</a><br/>
+            My first website....I wrote this in 1998 or 1999, and last updated it in 2000. I nabbed it from the wayback machine as best as I could, and I've been tweaking it periodicially since then.
+          </p>
+        </div>
+        
+        <div id="contact">
+          <h1 class="cover-heading">..::Contact::..</h1>
+          <p class="lead">Contact me!</p>
+        </div>
+      </main>
 
-      <hr>
-
-      <p><a href="trip.html">Trip Reports</a></p>
-
-      <hr>
-
-      <p><a href="rides.html">The Rides</a></p>
-
-      <hr>
-
-      <p><a href="bull.html">Raging Bull</a></p>
-
-      <hr>
-
-      <p><a href="http://www.sixflags.com" target="_blank">Other Six Flags Parks to Visit</a></p>
-
-      <hr>
-
-      <p><a href="links.html">Links</a></p>
-
-      <hr>
-
-      <p><a href="info.html">Recieve Information</a></p>
-
-      <hr>
-
-      <p><a href="mailto:">Contact Me</a></p>
-
-      <hr>
-
-      <p><a href="location.html">Location and Directions</a></p>
-
-      <hr>
-
-      <p align="left"><a href="http://home.guestpage.com/view/?id=sixflags1" target="blank">View and Sign Guestbook!</a></p>
-
-      <hr>
-
-      <p align="left">Visitor Number<a href="http://www.digits.com" target="_blank"><img src="images/visitor_count.png" width="30" height="34"></a></p>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+<!--          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
+        </div>
+      </footer>
     </div>
-    <div id="content">
-      <!--      <bgsound src="awoo1.wav" loop="1">-->
 
-      <h2 align="center"><font color="#FF0000" face="Verdana"><b>WELCOME TO MY SIX FLAGS GREAT AMERICA PAGE!</b></font></h2>
-      <hr>
-      <h3 align="center"><font color="#004000" face="Verdana"><b>Current Happenings:</b></font></h3>
-
-      <p align="center"><font color="#004000" face="Verdana"><b>I
-        thought it might be a good idea to keep the site open but just as
-        an information site. If anyone has pictures they'd like to send
-        me, I'd be happy to make a pictures page. I just thought I'd
-        probably better keep up to date here, as many people still come
-        to the site and all. Thanks.</b></font></p>
-
-      <h3 align="center"><font color="#800000" face="Verdana"><b>Check out the official site at </b></font><a href="http://www.sixflags.com" target="blank"><font
-                                                                                                        color="#800000" face="Verdana"><b>https://www.sixflags.com/greatamerica</b></font></a><font
-      color="#800000" face="Verdana"><b>.</b></font><font
-                                                                    color="#800000"><b> </b></font></h3>
-
-      <p align="center"><img src="images/great.jpg"></p>
-
-      <p>Page Updated: 1/12/00</p>
-
-      <hr>
-
-      <p><font color="#804000">This page is in no way affiliated with
-        Six Flags Great America. All information taken from the official
-        Six Flags Great America site is credited. Please do not solely
-        refer to my page for information, as Six Flags in no way
-        affiliated with the page or the content on it, unless otherwise
-        credited.</font></p>
-
-
-    </div>
+    <script src="./scripts/bootstrap-4.1.3/bootstrap.min.js"></script>
+    <script>
+      document.querySelector("#homeLink").onclick = function(event)
+      {
+        event.target.className = "nav-link active";
+        document.querySelector("#websitesLink").className = "nav-link";
+        document.querySelector("#contactLink").className = "nav-link";
+        
+        event.preventDefault();
+        document.querySelector("#aboutme").style.display = "block";
+        document.querySelector("#sites").style.display = "none";
+        document.querySelector("#contact").style.display = "none";
+      }
+      
+      document.querySelector("#websitesLink").onclick = function(event)
+      {
+        document.querySelector("#homeLink").className = "nav-link";
+        event.target.className = "nav-link active";
+        document.querySelector("#contactLink").className = "nav-link";
+        
+        event.preventDefault();
+        document.querySelector("#aboutme").style.display = "none";
+        document.querySelector("#sites").style.display = "block";
+        document.querySelector("#contact").style.display = "none";
+      }
+      
+      document.querySelector("#contactLink").onclick = function(event)
+      {
+        document.querySelector("#homeLink").className = "nav-link";
+        document.querySelector("#websitesLink").className = "nav-link";
+        event.target.className = "nav-link active";
+        
+        event.preventDefault();
+        document.querySelector("#aboutme").style.display = "none";
+        document.querySelector("#sites").style.display = "none";
+        document.querySelector("#contact").style.display = "block";
+      }      
+    </script>
   </body>
 </html>

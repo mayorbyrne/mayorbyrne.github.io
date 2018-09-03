@@ -1,0 +1,96 @@
+
+<html>
+  <head>
+    <title>Six Flags Great America Unofficial Homepage</title>
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
+
+  <body>
+    <div style="display:flex; flex-direction: row;">
+      <div id="toolbar">
+        <h1 align="center"><font color="#FF0000">SIX FLAGS </font></h1>
+        <h2 align="center"><font color="#FF0000">Great America</font></h2>
+
+        <hr>
+
+        <p>Pictures (Coming Soon)</p>
+
+        <hr>
+
+        <p><a id="imageMap" href="">Image Map</a></p>
+
+        <hr>
+
+        <p><a id="tripReports" href="">Trip Reports</a></p>
+
+        <hr>
+
+        <p><a id="rides" href="">The Rides</a></p>
+
+        <hr>
+
+        <p><a href="bull.html">Raging Bull</a></p>
+
+        <hr>
+
+        <p><a href="http://www.sixflags.com" target="_blank">Other Six Flags Parks to Visit</a></p>
+
+        <hr>
+
+        <p><a href="links.html">Links</a></p>
+
+        <hr>
+
+        <p><a href="info.html">Recieve Information</a></p>
+
+        <hr>
+
+        <p><a href="mailto:">Contact Me</a></p>
+
+        <hr>
+
+        <p><a href="location.html">Location and Directions</a></p>
+
+        <hr>
+
+        <p align="left"><a href="http://home.guestpage.com/view/?id=sixflags1" target="blank">View and Sign Guestbook!</a></p>
+
+        <hr>
+
+        <p align="left">Visitor Number<a href="http://www.digits.com" target="_blank"><img src="images/visitor_count.png" width="30" height="34"></a></p>
+      </div>
+      <div id="content">
+        <iframe id="contentFrame" src="./frames.html"></iframe>
+      </div>
+      </div>
+    <div style="align-self: flex-end;">
+      <p align="left"><a href="../index.html" target="blank" style="color: white;">Back</a></p>
+    </div>
+    <script>
+      document.querySelector("#imageMap").onclick = function(event)
+      {
+        event.preventDefault();
+        document.querySelector("#contentFrame").src = "./map.html";
+      }
+      
+      document.querySelector("#tripReports").onclick = function(event)
+      {
+        event.preventDefault();
+        document.querySelector("#contentFrame").src = "./trip.html";
+      }
+      
+      document.querySelector("#rides").onclick = function(event)
+      {
+        event.preventDefault();
+        document.querySelector("#contentFrame").src = "./rides.html";
+      }
+      
+      window.addEventListener("back", function()
+      {
+        console.log('back');
+        document.querySelector("#contentFrame").src = "./frames.html";
+      });
+    </script>
+  </body>
+</html>

@@ -24,6 +24,7 @@
           <nav class="nav nav-masthead justify-content-center">
             <a id="homeLink" class="nav-link active" href="#">Home</a>
             <a id="websitesLink" class="nav-link" href="#">Vintage Dev</a>
+            <a id="flutterLink" class="nav-link" href="#">Flutter</a>
             <a id="contactLink" class="nav-link" href="#">Contact</a>
           </nav>
         </div>
@@ -32,7 +33,7 @@
       <main role="main" class="inner cover">
         <div id="aboutme" style="min-width: 640px;">
           <h1 class="cover-heading">..::About me::..</h1>
-          <p class="lead">Hi, I'm Kevin Moritz. I live in Middle Tennessee, play music, and develop software. I enjoy watching hockey, riding rollercoasters, and playing with cute furry animals. I have a wonderful wife and son, and fantastic family and friends.</p>
+          <p class="lead">Hi, I'm Kevin Moritz. I live in Middle Tennessee, play music, and develop software. I enjoy watching hockey, riding rollercoasters, and playing with cute furry animals. I have a wonderful wife, son, and daughter, and fantastic family and friends.</p>
         </div>
         
         <div id="sites">
@@ -58,7 +59,7 @@
     <script>
       document.querySelector("#homeLink").onclick = function(event)
       {
-        resetLinks(["#websitesLink", "#contactLink"]);
+        resetLinks(["#websitesLink", "#contactLink", "#flutterLink"]);
         event.target.className = "nav-link active";
         event.preventDefault();
         show(["#aboutme"]);
@@ -68,7 +69,7 @@
       
       document.querySelector("#websitesLink").onclick = function(event)
       {
-        resetLinks(["#homeLink", "#contactLink"]);
+        resetLinks(["#homeLink", "#contactLink", "#flutterLink"]);
         event.target.className = "nav-link active";
         event.preventDefault();
         show(["#sites"]);
@@ -78,12 +79,21 @@
       
       document.querySelector("#contactLink").onclick = function(event)
       {
-        resetLinks(["#homeLink", "#websitesLink"]);
+        resetLinks(["#homeLink", "#websitesLink", "#flutterLink"]);
         event.target.className = "nav-link active";
         event.preventDefault();
         show(["#contact"]);
         hide(["#aboutme", "#sites"]);
         animate("main", "slideInRight");
+      }
+
+      document.querySelector("#flutterLink").onclick = function(event)
+      {
+        resetLinks(["#homeLink", "#websitesLink", "#contactLink", "#flutterLink"]);
+        event.target.className = "nav-link active";
+        event.preventDefault();
+
+        window.open("./flutter/index.html", "_blank");
       }
       
       function resetLinks(querySelects)
